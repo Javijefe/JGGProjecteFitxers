@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos</title>
+    <link rel="stylesheet" type="text/css" href="../css/ligas.css">
+</head>
+<body>
+<h1>Equipos de las Ligas</h1>
+
+<th:block th:if="${equipos != null}">
+    <table>
+        <tr th:each="equipo : ${equipos}">
+            <td th:text="${equipo.nombre}"></td>
+            <td>
+                <img th:src="${equipo.imagen}" style="width:100px;height:auto" alt="No carga la imagen">
+            </td>
+        </tr>
+
+    </table>
+
+</th:block>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de las Ligas</title>
+    <link rel="stylesheet" type="text/css" href="../css/ligas.css">
+</head>
+<body>
+<h1>Detalles de las Ligas</h1>
+
+<th:block th:if="${ligas != null}">
+    <table>
+        <thead>
+        <tr>
+            <th>Nombre de la Liga</th>
+            <th>País</th>
+            <th>Equipos</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="liga : ${ligas}">
+            <td th:text="${liga.nombre}">--</td>
+            <td th:text="${liga.pais}">--</td>
+            <td>
+                <a th:href="@{'equipos-' + ${liga.nombre} + '.html'}">Ver detalles de las liga</a>
+            </td>
+
+        </tr>
+        </tbody>
+    </table>
+</th:block>
+</body>
+</html>

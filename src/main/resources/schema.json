@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Generated schema for Root",
+  "type": "object",
+  "properties": {
+    "ligas": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string"
+          },
+          "pa\u00eds": {
+            "type": "string"
+          },
+          "equipos": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "nombre": {
+                  "type": "string"
+                },
+                "imagen": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "nombre",
+                "imagen"
+              ]
+            }
+          }
+        },
+        "required": [
+          "nombre",
+          "pa\u00eds",
+          "equipos"
+        ]
+      }
+    }
+  },
+  "required": [
+    "ligas"
+  ]
+}
